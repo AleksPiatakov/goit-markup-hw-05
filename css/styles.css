@@ -94,6 +94,7 @@ section {
 
 .link {
     text-decoration: none;
+    transition: 250ms var(--timing-function);
 }
 /* reset end */
 
@@ -251,12 +252,13 @@ section {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
+    transition: 250ms var(--timing-function);
 }
 
-/* .modal-btn:hover,
+.modal-btn:hover,
 .modal-btn:focus {
     background: var(--accent-color);
-} */
+}
 
 
 
@@ -405,6 +407,7 @@ section {
     border-radius: 50%;
     background-color: var(--secondary-accent-color);
     color: var(--logo-secondary-color);
+    transition: 250ms var(--timing-function);
 }
 
 .socials-link:hover,
@@ -448,7 +451,7 @@ background-color: var(--accent-color);
     letter-spacing: 0.04em;
     text-align: center;
     cursor: pointer;
-
+    transition: 250ms var(--timing-function);
 }
 
 .nav-portfolio:hover,
@@ -456,7 +459,7 @@ background-color: var(--accent-color);
     background-color: var(--accent-color);
     color: var(--primary-white-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-   
+
 }
 
 
@@ -545,6 +548,7 @@ background-color: var(--accent-color);
     border: 1px solid currentColor;
     border-radius: 4px;
     color: var(--primary-bg-customers);
+    transition: 250ms var(--timing-function);
 }
 
 .customers-icon {
@@ -584,6 +588,7 @@ background-color: var(--accent-color);
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
     fill: var(--logo-secondary-color);
+    transition: 250ms var(--timing-function);
 }
 
 .footer-social {
@@ -604,7 +609,6 @@ background-color: var(--link-bg-footer);
 .footer-desc {
     max-width: 264px;
     margin-top: 16px;
-    /* min-height: 110px; */
     color: var(--secondary-text-color);
     font-weight: 400;
     font-size: 16px;
@@ -635,6 +639,7 @@ background-color: var(--link-bg-footer);
     width: 100%;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
+    transition: 250ms var(--timing-function);
 }
 
 .backdrop.is-hidden {
@@ -651,6 +656,7 @@ background-color: var(--link-bg-footer);
     border-radius: 4px;
     background: var(--modal-bg);
     transform: translate(-50%, -50%);
+    
 }
 
 .modal-btm-close {
