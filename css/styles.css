@@ -11,6 +11,7 @@
     --primary-bg-customers: #8E8F99;
     --modal-bg: #fcfcfc;
     --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --bg-backdrop: rgba(46, 47, 66, 0.4);
 }
 
 body {
@@ -94,7 +95,7 @@ section {
 
 .link {
     text-decoration: none;
-    transition: 250ms var(--timing-function);
+
 }
 /* reset end */
 
@@ -168,16 +169,18 @@ section {
 .menu-link {
     position: relative;
     padding-top: 24px;
-    padding-bottom: 28px;
-    color:inherit;
+    padding-bottom: 31px;
+    background-color:inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    
 }
 
 .menu-item .link.current {
     color: var(--accent-color);
+    
 }
 
 .menu-link:hover,
@@ -195,12 +198,13 @@ section {
     border-radius: 2px;
     background-color: var(--accent-color);
     opacity: 0;
-    transition: 250ms var(--timing-function);
+    
 }
 
 .menu-link:hover::after {
    width: 100%; 
    opacity: 1;
+   transition: opacity 1250ms var(--timing-function);
 }
 
 /**
@@ -230,31 +234,6 @@ section {
 }
 
 
-/**
-  |============================
-  | modal
-  |============================
-*/
-.modal-btn {
-    align-items: center;
-    min-width: 169px;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 16px 32px;
-    background-color: var(--secondary-accent-color);
-    color: var(--primary-white-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    transition: 250ms var(--timing-function);
-}
-
-.modal-btn:hover,
-.modal-btn:focus {
-    background: var(--accent-color);
-}
 
 
 /**
@@ -284,6 +263,33 @@ section {
     line-height: 1.07;
     letter-spacing: 0.02em;
     text-align: center;
+}
+
+
+/**
+  |============================
+  | modal btn hero
+  |============================
+*/
+.modal-btn {
+    align-items: center;
+    min-width: 169px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 16px 32px;
+    background-color: var(--secondary-accent-color);
+    color: var(--primary-white-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    transition: background-color 250ms var(--timing-function);
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+    background-color: var(--accent-color);
 }
 
 
@@ -380,7 +386,7 @@ section {
     border-radius: 50%;
     background-color: var(--secondary-accent-color);
     color: var(--logo-secondary-color);
-    transition: 250ms var(--timing-function);
+    transition: background-color 250ms var(--timing-function);
 }
 
 .socials-link:hover,
@@ -424,7 +430,7 @@ background-color: var(--accent-color);
     letter-spacing: 0.04em;
     text-align: center;
     cursor: pointer;
-    transition: 250ms var(--timing-function);
+    transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function);
 }
 
 .nav-portfolio:hover,
@@ -518,7 +524,7 @@ background-color: var(--accent-color);
     border: 1px solid currentColor;
     border-radius: 4px;
     color: var(--primary-bg-customers);
-    transition: 250ms var(--timing-function);
+    transition: color 250ms var(--timing-function);
 }
 
 .customers-icon {
@@ -558,7 +564,7 @@ background-color: var(--accent-color);
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
     fill: var(--logo-secondary-color);
-    transition: 250ms var(--timing-function);
+    transition: background-color 250ms var(--timing-function);
 }
 
 .footer-social {
@@ -608,13 +614,14 @@ background-color: var(--link-bg-footer);
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(46, 47, 66, 0.4);
-    transition: 250ms var(--timing-function);
-}
+    background-color: var(--bg-backdrop);
+    opacity: 1;
+    transition: opacity 250ms var(--timing-function);
+    }
 
 .backdrop.is-hidden {
     opacity: 0;
-    pointer-events: none;
+    pointer-events: none;   
 }
 
 .modal {
@@ -624,12 +631,11 @@ background-color: var(--link-bg-footer);
     width: 408px;
     height: 584px;
     border-radius: 4px;
-    background: var(--modal-bg);
+    background-color: var(--modal-bg);
     transform: translate(-50%, -50%);
-    
 }
 
-.modal-btm-close {
+.modal-btn-close {
     position: absolute;
     top: 24px;
     right: 24px;
@@ -637,10 +643,10 @@ background-color: var(--link-bg-footer);
     height: 24px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    background-color: var(--secondary-text-color);
+    background-color: var(--secondary-text-color); 
 }
 
-.modal-btm-vector {
+.modal-btn-vector {
     position: absolute;
     top: 33.33%;
     right: 33.33%;
