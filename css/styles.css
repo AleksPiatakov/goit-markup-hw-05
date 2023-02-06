@@ -204,7 +204,7 @@ section {
 .menu-link:hover::after {
    width: 100%; 
    opacity: 1;
-   transition: opacity 1250ms var(--timing-function);
+   transition: opacity 250ms var(--timing-function);
 }
 
 /**
